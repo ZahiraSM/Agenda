@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <!-- google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Normalizador -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- Alpine -->
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="header"
+                x-data="{ isTopScroll: true }"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--solid'">
+            <div class="container">
+                <button class="button">
+                    <img src="img/menu.svg" alt="Abrir menú" class="image">
+                </button>
+                <button class="button">
+                    <img src="img/search.svg" alt="Buscar" class="image">
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="weather">
+                <div class="container">
+                    <div class="weather__date">
+                        <p class="weather__weekday">Domingo</p>
+                        <time class="weather__timespan" datetime="2023-12-24">Diciembre,24,2023 </time>
+                    </div>
+                    <div class="weather__temperature">
+                        32ºC <img src="img/brightness-up.svg" alt="Sol" class="image weather__icon">
+                    </div>
+                </div>
+            </section>
+            <section class="welcome">
+                <div class="container">
+                    <p  class="welcome__text">Buenos días!</p>
+                </div>
+            </section>
+            <section class="meetings">
+                <div class="container">
+                    <ol class="ul-reset meetings__list">
+                        <li>
+                            <article class="meeting">
+                                <time class="meeting__time" datetime="8:00">
+                                    <span class="meeting__time-hour">8</span>
+                                    <span class="meeting__time-timezone">am</span>
+                                </time>
+                                <div class="meeting__text">
+                                    <h2 class="meeting__title">Desayunar con el presidente</h2>
+                                    <p class="meeting__description">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit. In, praesentium.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="meeting">
+                                <time class="meeting__time" datetime="9:00">
+                                    <span class="meeting__time-hour">9</span>
+                                    <span class="meeting__time-timezone">am</span>
+                                </time>
+                                <div class="meeting__text">
+                                    <h2 class="meeting__title">Dejar a mis hijos en el colegio</h2>
+                                    <p class="meeting__description">Dolor sit amet, consectetur adipisicing
+                                        elit. In, praesentium.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="meeting">
+                                <time class="meeting__time" datetime="11:00">
+                                    <span class="meeting__time-hour">11</span>
+                                    <span class="meeting__time-timezone">am</span>
+                                </time>
+                                <div class="meeting__text">
+                                    <h2 class="meeting__title">Coffe break</h2>
+                                    <p class="meeting__description">Sit amet, consectetur adipisicing
+                                        elit. In, praesentium.</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <ul class="ul-reset footer__list">
+                <li>
+                    <button class="button button--round button--blue">
+                        <img class="image" src="img/checkmark.svg" alt="Hecho">
+                    </button>
+                </li>
+                <li>
+                    <button class="button button--round button--yellow">
+                        <img class="image" src="img/edit-pencil.svg" alt="Editar">
+                    </button>
+                </li>
+                <li>
+                    <button class="button button--round button--green">
+                        <img class="image" src="img/add-outline.svg" alt="Añadir">
+                    </button>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
